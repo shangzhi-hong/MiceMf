@@ -36,7 +36,7 @@ ry <- sample(
 wy <- !ry
 num.trees.categorical <- 10
 
-test_that("RfEmpImp works for categorical variables", {
+test_that("mf.categorical works for categorical variables", {
     for (pre.bootstrap in c(TRUE, FALSE)) {
         for (use.pred.prob.categorical in c(TRUE, FALSE)) {
             catImpOut1 <- mice.impute.mf.categorical(
@@ -67,7 +67,7 @@ test_that("RfEmpImp works for categorical variables", {
 
 })
 
-test_that("RfEmpImp caller works for categorical variables", {
+test_that("mf caller works for categorical variables", {
     for (pre.bootstrap in c(TRUE, FALSE)) {
         for (use.pred.prob.categorical in c(TRUE, FALSE)) {
             catImpOut1 <- mice.impute.mf(
@@ -110,7 +110,7 @@ testData <- transform(
 y <- testData[["y"]]
 x <- subset(testData, select = -y)
 
-test_that("RfEmpImp works for logical variables", {
+test_that("mf.categorical works for logical variables", {
     for (pre.bootstrap in c(TRUE, FALSE)) {
         for (use.pred.prob.categorical in c(TRUE, FALSE)) {
             catImpOut1 <- mice.impute.mf.categorical(
@@ -139,7 +139,7 @@ test_that("RfEmpImp works for logical variables", {
 
 })
 
-test_that("RfEmpImp caller works for logical variables", {
+test_that("mf caller works for logical variables", {
     for (pre.bootstrap in c(TRUE, FALSE)) {
         for (use.pred.prob.categorical in c(TRUE, FALSE)) {
             catImpOut1 <- mice.impute.mf(

@@ -22,7 +22,7 @@ ry <- sample(
 wy <- !ry
 num.trees.continuous <- 10
 
-test_that("RfEmpImp works for continuous variables", {
+test_that("mf.continuous works for continuous variables", {
     for (pre.bootstrap in c(TRUE, FALSE)) {
         for (normal.error.continuous in c(TRUE, FALSE)) {
             numImpOut1 <- mice.impute.mf.continuous(
@@ -60,7 +60,7 @@ test_that("RfEmpImp works for continuous variables", {
     }
 })
 
-test_that("RfEmpImp caller works for continuous variables", {
+test_that("mf caller works for continuous variables", {
     for (pre.bootstrap in c(TRUE, FALSE)) {
             numImpOut1 <- mice.impute.mf(
                 y = y,
@@ -89,7 +89,7 @@ test_that("RfEmpImp caller works for continuous variables", {
     }
 })
 
-test_that("RfEmpImp caller works for continuous variables", {
+test_that("mf.norm caller works for continuous variables", {
     for (pre.bootstrap in c(TRUE, FALSE)) {
             numImpOut1 <- mice.impute.mf.norm(
                 y = y,
@@ -107,7 +107,6 @@ test_that("RfEmpImp caller works for continuous variables", {
                 num.trees.continuous = num.trees.continuous,
                 num.threads = 1
             )
-
             expect_true(all(c(
                 is.numeric(numImpOut1),
                 is.numeric(numImpOut2)
@@ -117,6 +116,5 @@ test_that("RfEmpImp caller works for continuous variables", {
             expect_true(!anyNA(numImpOut1) &&
                             !anyNA(numImpOut2))
             expect_true(!all(numImpOut1 == numImpOut2))
-
     }
 })
