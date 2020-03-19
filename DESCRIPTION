@@ -1,15 +1,14 @@
 Package: MiceMf
 Type: Package
-Title: Single Imputation using MICE and random forest
-Version: 0.5.0
+Title: Single imputation using MICE and random forest
+Version: 1.0.0
 Authors@R: c(person("Shangzhi", "Hong", role = c("cre"),
             email = "shangzhi-hong@hotmail.com",
             comment = c(ORCID = "0000-0003-3843-7040")),
             person("Shangzhi", "Hong", role = c("aut"),
             email = "shangzhi-hong@hotmail.com",
             comment = c(ORCID = "0000-0003-3843-7040")),
-            person("Henry S.", "Lynn", role = c("aut", "ths"),
-            email = "hslynn@shmu.edu.cn"))
+            person("Henry S.", "Lynn", role = c("aut", "ths")))
 Maintainer: Shangzhi Hong <shangzhi-hong@hotmail.com>
 Description: Adapter for MICE.
     Tools for performing single imputation using random forest algorithm.

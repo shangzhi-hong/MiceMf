@@ -6,6 +6,8 @@
 #'
 #' @param maxit Number of iterations, default to \code{5}
 #'
+#' @param ... Other parameters to pass down
+#'
 #' @return Imputed data set
 #' @export
 #'
@@ -19,6 +21,7 @@ MiceMfNorm <- function(data, num.trees = 10, maxit = 5, ...) {
         maxit = maxit,
         printFlag = FALSE,
         num.trees = num.trees,
+        maxcor = 1.0,
         ...
     )
     miceCompData <- complete(data = miceImp, action = 1L)

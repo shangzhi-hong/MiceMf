@@ -1,3 +1,3 @@
-# MiceMf 0.5.0
+# MiceMf 1.0.0
 * First public release on GitHub
 * Unit tests ready

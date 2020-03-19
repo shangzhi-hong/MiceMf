@@ -12,6 +12,8 @@ MiceMfNorm(data, num.trees = 10, maxit = 5, ...)
 \item{num.trees}{Number of trees to build, default to \code{10}}
 
 \item{maxit}{Number of iterations, default to \code{5}}
+
+\item{...}{Other parameters to pass down}
 }
 \value{
 Imputed data set

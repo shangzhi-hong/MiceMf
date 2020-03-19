@@ -28,7 +28,7 @@
 #' American journal of epidemiology 179.6 (2014): 764-774.
 #'
 #' @examples
-#' imp <- missForestMice(xmis)
+#' imp <- missForestMice(nhanes)
 #'
 #' @export
 missForestMice <- function(xmis,
@@ -72,6 +72,7 @@ missForestMice <- function(xmis,
         printFlag = FALSE,
         data.init = xInit,
         num.trees = ntree,
+        maxcor = 1.0,
         ...
     )
     miceCompData <- complete(data = miceImp, action = 1L)

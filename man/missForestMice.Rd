@@ -34,7 +34,7 @@ Imputed complete dataset
 MissForest-flavored missing data imputation under MICE framework
 }
 \examples{
-imp <- missForestMice(xmis)
+imp <- missForestMice(nhanes)
 
 }
 \references{
