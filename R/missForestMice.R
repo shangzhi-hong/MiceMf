@@ -72,8 +72,6 @@ missForestMice <- function(xmis,
         printFlag = FALSE,
         data.init = xInit,
         num.trees = ntree,
-        maxcor = 1.0,
-        eps = 0,
         ...
     )
     miceCompData <- complete(data = miceImp, action = 1L)

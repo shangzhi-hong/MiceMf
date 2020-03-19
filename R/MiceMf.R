@@ -19,8 +19,6 @@ MiceMf <- function(data, num.trees = 10, maxit = 5, ...) {
         maxit = maxit,
         printFlag = FALSE,
         num.trees = num.trees,
-        maxcor = 1.0,
-        eps = 0,
         ...
     )
     miceCompData <- complete(data = miceImp, action = 1L)
