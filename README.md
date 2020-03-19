@@ -18,6 +18,19 @@ remotes::install_github("shangzhi-hong/MiceMf")
 
 ## Example
 
+### Using warpper function
+
+``` r
+library(MiceMf)
+# Perform imputation
+data("airquality")
+# Get the imputed data
+resCmp <- MiceMf(airquality)
+resCmpNorm <- MiceMfNorm(airquality)
+```
+
+### Using mice
+
 ``` r
 library(MiceMf)
 # Perform imputation
@@ -27,4 +40,13 @@ impObjNorm <- mice(airquality, method = "mf.norm", m = 1, printFlag = FALSE)
 # Get the complete data
 resCmp <- complete(impObj, action = 1L)
 resCmpNorm <- complete(impObjNorm, action = 1L)
+```
+
+### MissForest-flavored imputation using MICE
+
+``` r
+library(MiceMf)
+# Perform imputation
+data("airquality")
+impObj <- missForestMice(airquality)
 ```
